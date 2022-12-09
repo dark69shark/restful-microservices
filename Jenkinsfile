@@ -11,7 +11,7 @@ pipeline {
         }
                 stage('Buiild') {
             steps {
-               docker build . -t "${JOB_BASE_NAME}-${BUILD_NUMBER}"
+               sh "docker build . -t ${JOB_BASE_NAME}-${BUILD_NUMBER}"
                
             }
                 }
