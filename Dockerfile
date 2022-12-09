@@ -6,7 +6,7 @@ RUN mvn package
 
 FROM openjdk:20-slim
 
-COPY --from=builder /app/target/restful-microservices-1.0.jar .
+COPY --from=builder target/restful-microservices-1.0.jar .
 
 EXPOSE 8080
 
