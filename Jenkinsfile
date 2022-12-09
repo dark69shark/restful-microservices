@@ -15,7 +15,7 @@ pipeline {
             }}
             stage('Test run') {
             steps {
-                sh "docker run --rm -p8080:8080 ${JOB_BASE_NAME}:${BUILD_NUMBER}"
+                sh "docker run --rm -d -p8080:8080 ${JOB_BASE_NAME}:${BUILD_NUMBER}"
                 sh 'curl http://127.0.0.1:8080'
             }
             }
